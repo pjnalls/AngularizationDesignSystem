@@ -1,0 +1,25 @@
+@import '../../config';
+
+.title {
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba($primary-color, 1),
+    rgba($secondary-color, 1)
+  );
+
+  &__name {
+    font-size: 2rem;
+    padding: 1rem 1rem;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+
+  &__brand {
+    font-weight: 700;
+  }
+
+  &__app-type {
+    color: $text-color-secondary
+  }
+}
