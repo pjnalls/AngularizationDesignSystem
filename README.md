@@ -1,9 +1,9 @@
-<h1 align="center"> 
+<h1 align="center">
 
 <br />
 <br />
 
-<strong>Angularization (Aº) DesignSystem</strong>
+<strong>Angularization (Aº) <br />Design System</strong>
 
 <br />
 
