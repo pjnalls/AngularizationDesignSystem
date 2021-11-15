@@ -12,4 +12,13 @@
 <br />
 <br />
 </h1>
+
+<br />
+
+<p align="center">
 A design system developed with Storybook with Figma addons for Angular components. (WIP)
+</p>
+
+<br />
+
+<hr>
