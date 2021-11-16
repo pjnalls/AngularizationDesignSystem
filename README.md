@@ -3,11 +3,11 @@
 <br />
 <br />
 
-<strong>Angularization (Aº) <br />Design System</strong>
+<strong>Angularization 📐 <br />Design System</strong>
 
 <br />
 
-<img width="100%" src="a-todo.jpg" alt="Aº TODOs app image."/>
+<img width="180px" src="a-degrees.png" alt="Aº brand image."/>
 
 <br />
 <br />
