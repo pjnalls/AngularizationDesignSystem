@@ -1,7 +1,10 @@
-<div class="todo" (dbclick)="onToggle(todo)">
+<div
+  [ngClass]="{ todo: true, 'delete__transition-up': deleteBtnClicked }"
+  (dbclick)="onToggle(todo)"
+>
   <h3>
     <span class="todo__text">{{ todo.text }}</span>
     <p>{{ todo.day }}</p>
-    <span class="delete"> x </span>
+    <span (click)="onDelete(todo)" class="delete"> x </span>
   </h3>
 </div>
