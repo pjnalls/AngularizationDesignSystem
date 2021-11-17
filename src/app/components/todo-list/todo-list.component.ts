@@ -12,5 +12,19 @@ export class TodoListComponent implements OnInit {
 
   constructor() {}
 
+  deleteTodo(todo: Todo) {
+    /** 
+     * Give CSS some time to play delete animation.
+     */
+    setTimeout(() => {
+      this.todos.forEach((x, i) => {
+        if (x.id === todo.id) {
+          this.todos.splice(i, 1);
+          console.log(this.todos);
+        }
+      });
+    }, 1000);
+  }
+
   ngOnInit(): void {}
 }
