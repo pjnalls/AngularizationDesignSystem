@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { UiService } from 'src/app/services/ui.service';
 import { Todo } from 'src/app/Todo';
@@ -9,10 +10,10 @@ import { Todo } from 'src/app/Todo';
   styleUrls: ['./form.component.scss'],
 })
 export class FormComponent implements OnInit {
-  @Output() onAddTodo: EventEmitter<Todo> = new EventEmitter();
+  @Input() todos: Todo[] = [];
   text: string = '';
+
   day: string = '';
-  reminder: boolean = false;
   showAddTodo: boolean = true;
   subscription: Subscription = new Subscription();
 
@@ -34,16 +35,44 @@ export class FormComponent implements OnInit {
       return;
     }
 
-    const newTodo = {
+    const dateTime = new Date();
+
+    const newTodo: Todo = {
+      id: this.todos.length + 1,
       text: this.text,
-      day: this.day,
-      reminder: this.reminder,
+      day: `${
+        dateTime.getMonth() + 1
+      }/${dateTime.getDate()} @ ${this.formatAMPM(dateTime)}`,
     };
 
-    this.onAddTodo.emit(newTodo);
+    this.addTodo(newTodo);
 
     this.text = '';
     this.day = '';
-    this.reminder = false;
+  }
+
+  addTodo(todo: Todo) {
+    /**
+     * Give CSS some time to play delete animation.
+     */
+    setTimeout(() => {
+      this.todos.push(todo);
+    }, 1000);
+  }
+
+  updateInputText(text: string) {
+    this.text = text;
+  }
+
+  formatAMPM(date: Date) {
+    let hours = date.getHours(),
+      minutes: any = date.getMinutes(),
+      ampm = hours >= 12 ? 'pm' : 'am';
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+    return `${hours}:${minutes} ${ampm}`;
   }
 }
