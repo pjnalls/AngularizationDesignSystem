@@ -1,4 +1,4 @@
-@import './app/config';
+@import "./app/config";
 
 /** Global Styling Rule Resets */
 * {
@@ -14,4 +14,21 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   line-height: 1;
+}
+
+::-webkit-scrollbar-track {
+  padding: 2px 0;
+  background-color: $secondary-color;
+  border-left: 2px solid $text-color-secondary;
+}
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: $primary-color;
+  border-left: 2px solid #000;
 }
