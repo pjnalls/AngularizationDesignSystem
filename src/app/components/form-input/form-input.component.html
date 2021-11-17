@@ -1,1 +1,17 @@
-<p>form-input works!</p>
+<div class="form-input">
+  <form *ngIf="showAddTodo" class="form-input__form" (ngSubmit)="onSubmit()">
+    
+    <div class="form-control">
+      <label for="text" class="form-input__label">ADD</label>
+      <input
+        type="text"
+        name="text"
+        class="form-input__input"
+        [(ngModel)]="text"
+        id="text"
+        placeholder="Add a to-do."
+      />
+    </div>
+  </form>
+</div>
+
