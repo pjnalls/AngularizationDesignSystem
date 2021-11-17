@@ -1,1 +1,7 @@
-<p>todo works!</p>
+<div class="todo" (dbclick)="onToggle(todo)">
+  <h3>
+    <span class="todo__text">{{ todo.text }}</span>
+    <p>{{ todo.day }}</p>
+    <span class="delete"> x </span>
+  </h3>
+</div>
