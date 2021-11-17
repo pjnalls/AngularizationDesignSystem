@@ -1,51 +1,17 @@
-@import "../../config";
+@import "./../../config";
 
 .form-input {
-  overflow: hidden;
-  position: fixed;
-  width: 100vw;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba($secondary-color, 1),
-    rgba($primary-color, 1)
-  );
+  text-decoration: none;
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 2px $text-color-primary;
+  color: $text-color-secondary;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  width: calc(100vw - 11rem);
+}
 
-  .form-control {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    
-  }
-
-  &__form {
-    font-size: 2rem;
-    padding: 1rem 1rem;
-    margin-bottom: 0;
-    font-weight: 300;
-  }
-
-  &__input {
-    text-decoration: none;
-    background-color: transparent;
-    border: 0;
-    border-bottom: solid 2px $text-color-primary;
-    color: $text-color-secondary;
-    font-size: 1.5rem;
-    padding: 0.5rem 1rem;
-    margin: 0 0.25rem;
-    width: calc(100% - 11rem);
-  }
-
-  &__brand {
-    font-weight: 700;
-  }
-
-  &__app-type {
-    color: $text-color-secondary;
-  }
-
-  ::placeholder {
-    color: $text-color-disabled;
-  }
+::placeholder {
+  color: $text-color-disabled;
 }
