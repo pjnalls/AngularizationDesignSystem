@@ -5,3 +5,7 @@ $tertiary-color: #121fa1;
 $text-color-primary: #fff;
 $text-color-secondary: #abebff;
 $text-color-disabled: #7bbbe0;
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
