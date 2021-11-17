@@ -1,6 +1,6 @@
 <div
-  [ngClass]="{ todo: true, 'delete__transition-up': deleteBtnClicked }"
-  (dbclick)="onToggle(todo)"
+  [ngClass]="{ 'delete__transition-up': deleteBtnClicked, 'added__transition-up__start' : todo.added, 'added__transition-up__finished' : animationIsDelayed }"
+  class="todo"
 >
   <h3>
     <span class="todo__text">{{ todo.text }}</span>
