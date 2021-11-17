@@ -10,21 +10,12 @@ import { Todo } from 'src/app/Todo';
 })
 export class FormComponent implements OnInit {
   @Input() todos: Todo[] = [];
-  @Input() addBtnClicked: boolean = false;
 
   text: string = '';
 
-  day: string = '';
-  showAddTodo: boolean = true;
-  subscription: Subscription = new Subscription();
-
-  constructor(private todoService: TodoService) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 
   onSubmit() {
     if (!this.text) {
@@ -44,9 +35,6 @@ export class FormComponent implements OnInit {
     };
 
     this.addTodo(newTodo);
-
-    this.text = '';
-    this.day = '';
   }
 
   addTodo(todo: Todo) {
@@ -54,10 +42,6 @@ export class FormComponent implements OnInit {
      * Give CSS some time to play delete animation.
      */
     this.todos.push(todo);
-  }
-
-  onAdded() {
-    this.addBtnClicked = true;
   }
 
   updateInputText(text: string) {
