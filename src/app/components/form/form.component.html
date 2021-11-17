@@ -1,6 +1,6 @@
 <form class="form" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <app-form-input (onChangedInput)="updateInputText($event)"></app-form-input>
-    <app-form-button></app-form-button>
+    <app-form-button (onAddTodo)="onAdded()"></app-form-button>
   </div>
 </form>

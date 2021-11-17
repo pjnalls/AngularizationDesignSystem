@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
-import { UiService } from 'src/app/services/ui.service';
+import { TodoService } from 'src/app/services/todo.service';
 import { Todo } from 'src/app/Todo';
 
 @Component({
@@ -11,17 +10,15 @@ import { Todo } from 'src/app/Todo';
 })
 export class FormComponent implements OnInit {
   @Input() todos: Todo[] = [];
+  @Input() addBtnClicked: boolean = false;
+
   text: string = '';
 
   day: string = '';
   showAddTodo: boolean = true;
   subscription: Subscription = new Subscription();
 
-  constructor(private uiService: UiService) {
-    this.subscription = this.uiService
-      .onToggle()
-      .subscribe((value) => (this.showAddTodo = value));
-  }
+  constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {}
 
@@ -43,6 +40,7 @@ export class FormComponent implements OnInit {
       day: `${
         dateTime.getMonth() + 1
       }/${dateTime.getDate()} @ ${this.formatAMPM(dateTime)}`,
+      added: true,
     };
 
     this.addTodo(newTodo);
@@ -55,9 +53,11 @@ export class FormComponent implements OnInit {
     /**
      * Give CSS some time to play delete animation.
      */
-    setTimeout(() => {
-      this.todos.push(todo);
-    }, 1000);
+    this.todos.push(todo);
+  }
+
+  onAdded() {
+    this.addBtnClicked = true;
   }
 
   updateInputText(text: string) {
