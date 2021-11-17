@@ -10,7 +10,6 @@ export class TodoComponent implements OnInit {
   @Input() todo: Todo = {
     text: '',
     day: '',
-    reminder: true,
   };
 
   @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();
