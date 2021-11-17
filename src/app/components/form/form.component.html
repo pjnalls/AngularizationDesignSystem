@@ -1,1 +1,6 @@
-<p>form works!</p>
+<form *ngIf="showAddTodo" class="form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <app-form-input [text]="text"></app-form-input>
+    <app-form-button></app-form-button>
+  </div>
+</form>
