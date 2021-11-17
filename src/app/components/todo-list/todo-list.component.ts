@@ -13,7 +13,7 @@ export class TodoListComponent implements OnInit {
   constructor() {}
 
   deleteTodo(todo: Todo) {
-    /** 
+    /**
      * Give CSS some time to play delete animation.
      */
     setTimeout(() => {
