@@ -1,0 +1,22 @@
+@import "./../../config";
+
+.form-button {
+  border: 0;
+  color: $tertiary-color;
+  background: $text-color-primary;
+  font-size: 1rem;
+  margin: 0 0.75rem;
+  font-weight: 700;
+  width: 7.5rem;
+  padding: 0.5rem 0;
+  border: solid 2px $tertiary-color;
+  border-radius: 0.3rem;
+}
+
+.form-button:hover {
+  background: $text-color-secondary;
+  border-color: #000;
+  color: #000;
+  cursor: pointer;
+  @include transition-ease;
+}
