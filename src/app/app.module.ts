@@ -9,6 +9,7 @@ import { FormInputComponent } from './components/form-input/form-input.component
 import { TitleComponent } from './components/title/title.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,13 +19,10 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     FormInputComponent,
     TitleComponent,
     TodoComponent,
-    TodoListComponent
+    TodoListComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
