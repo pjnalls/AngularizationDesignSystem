@@ -16,17 +16,18 @@ export class TodoComponent implements OnInit {
   @Output() onToggleReminder: EventEmitter<Todo> = new EventEmitter();
 
   deleteBtnClicked: boolean = false;
+  animationIsDelayed: boolean = false;
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.animationIsDelayed = true;
+    }, 100);
+  }
 
   onDelete(todo: Todo) {
     this.deleteBtnClicked = true;
     this.onDeleteTodo.emit(todo);
-  }
-
-  onToggle(todo: Todo) {
-    this.onToggleReminder.emit(todo);
   }
 }
