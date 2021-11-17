@@ -1,1 +1,9 @@
-<p>todo-list works!</p>
+<div class="todo-list">
+  <app-todo *ngFor="let todo of todos" [todo]="todo"></app-todo>
+</div>
+
+<!--
+  TODO: Add event handlers to the template code above.
+  (onDeleteTodo)="deleteTodo(todo)"
+  (onToggleReminder)="toggleReminder(todo)"
+-->
