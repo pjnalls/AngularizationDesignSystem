@@ -1,8 +1,8 @@
 <input
   type="text"
-  name="text"
   class="form-input"
-  [(ngModel)]="text"
+  name="text"
   id="text"
   placeholder="Add a to-do."
+  (change)="onChange($event)"
 />
