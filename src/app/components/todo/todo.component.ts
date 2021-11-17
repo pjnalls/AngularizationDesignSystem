@@ -16,11 +16,14 @@ export class TodoComponent implements OnInit {
   @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<Todo> = new EventEmitter();
 
+  deleteBtnClicked: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
 
   onDelete(todo: Todo) {
+    this.deleteBtnClicked = true;
     this.onDeleteTodo.emit(todo);
   }
 
