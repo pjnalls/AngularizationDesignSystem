@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-form-input',
@@ -6,7 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./form-input.component.scss'],
 })
 export class FormInputComponent {
-  @Input() text: string = '';
+  @Output() onChangedInput: EventEmitter<string> = new EventEmitter();
+  text: string = '';
+
+  onChange(event: any) {
+    this.onChangedInput.emit(event.target.value);
+  }
 
   constructor() {}
 }
