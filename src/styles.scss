@@ -18,7 +18,12 @@ body {
 
 ::-webkit-scrollbar-track {
   padding: 2px 0;
-  background-color: $secondary-color;
+  background: linear-gradient(
+    to bottom,
+    rgba($secondary-color, 1),
+    rgba($primary-color, 1),
+    rgba($secondary-color, 1)
+  );;
   border-left: 2px solid $text-color-secondary;
 }
 
