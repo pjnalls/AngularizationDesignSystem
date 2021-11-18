@@ -37,7 +37,7 @@
 }
 
 .delete__transition-up {
-  margin: -5rem -100% 0 100% !important;
+  margin: -4rem -100% 0 100% !important;
   font-size: 0;
   opacity: 0 !important;
   @include transition-ease;
@@ -45,7 +45,6 @@
 
 .added__transition-up__start {
   margin: 50%;
-  padding: 0;
   opacity: 0;
 }
 
