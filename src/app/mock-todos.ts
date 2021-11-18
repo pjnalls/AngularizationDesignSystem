@@ -5,6 +5,7 @@ export const TODOS: Todo[] = [
     id: 1,
     text: 'Take out the trash.',
     day: '11/17 @ 7:00 AM',
+    top: true,
   },
   {
     id: 2,

@@ -19,8 +19,8 @@ export class TodoListComponent implements OnInit {
     setTimeout(() => {
       this.todos.forEach((x, i) => {
         if (x.id === todo.id) {
-          this.todos.splice(i, 1);
-          console.log(this.todos);
+          this.todos.splice(i, 1);          
+          if (i === 0) this.todos[0].top = true;
         }
       });
     }, 1000);

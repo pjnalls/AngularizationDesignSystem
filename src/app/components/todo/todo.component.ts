@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 import { Todo } from 'src/app/Todo';
 
 @Component({
@@ -8,9 +9,11 @@ import { Todo } from 'src/app/Todo';
 })
 export class TodoComponent implements OnInit {
   @Input() todo: Todo = {
+    id: 0,
     text: '',
     day: '',
   };
+  @Input() todos: Todo[] = [];
 
   @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<Todo> = new EventEmitter();

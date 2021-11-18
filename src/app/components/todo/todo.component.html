@@ -1,5 +1,6 @@
 <div
-  [ngClass]="{ 'delete__transition-up': deleteBtnClicked, 'added__transition-up__start' : todo.added, 'added__transition-up__finished' : animationIsDelayed }"
+  [ngClass]="{ 'delete__transition-up__stack': deleteBtnClicked && !todo.top, 
+  'delete__transition-up__top': deleteBtnClicked && todo.top, 'added__transition-up__start' : todo.added, 'added__transition-up__finished' : animationIsDelayed }"
   class="todo"
 >
   <h3>

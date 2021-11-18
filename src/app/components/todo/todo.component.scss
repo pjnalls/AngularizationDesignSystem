@@ -36,8 +36,16 @@
   }
 }
 
-.delete__transition-up {
+.delete__transition-up__top {
   margin: -4rem -100% 0 100% !important;
+  padding: 0;
+  font-size: 0;
+  opacity: 0 !important;
+  @include transition-ease;
+}
+
+.delete__transition-up__stack {
+  margin: -6rem -100% 0 100% !important;
   font-size: 0;
   opacity: 0 !important;
   @include transition-ease;
