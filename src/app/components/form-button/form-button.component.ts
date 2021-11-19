@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Todo } from 'src/app/Todo';
+import type { Todo } from 'src/app/Todo';
 
 @Component({
   selector: 'app-form-button',
