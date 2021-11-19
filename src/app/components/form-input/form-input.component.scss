@@ -15,3 +15,9 @@
 ::placeholder {
   color: $text-color-disabled;
 }
+
+input:valid {
+  border-bottom: solid 2px #88ffcc;
+  color: $text-color-secondary;
+  @include transition-ease;
+}

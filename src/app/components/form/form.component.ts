@@ -1,6 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { TodoService } from 'src/app/services/todo.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Todo } from 'src/app/Todo';
 
 @Component({

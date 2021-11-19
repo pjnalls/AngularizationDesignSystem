@@ -9,12 +9,12 @@ export const TODOS: Todo[] = [
   },
   {
     id: 2,
-    text: 'I need to make a super long sentence to test this to-do app for the Angularization (A°) design system. We\'ll see how the wrap of the text for the to-do item looks in the UI.',
+    text: 'Eat lunch.',
     day: '11/18 @ 12:00 PM',
   },
   {
     id: 3,
-    text: 'Go to doctor\'s appointment.',
+    text: 'Doctor\'s appointment.',
     day: '11/19 @ 3:45 PM',
   },
 ]
