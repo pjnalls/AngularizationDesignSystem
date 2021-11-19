@@ -1,5 +1,5 @@
 import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
-import { APP_BASE_HREF, CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { AppComponent } from 'src/app/app.component';
 import { FormComponent } from 'src/app/components/form/form.component';
