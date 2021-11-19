@@ -7,11 +7,17 @@ import Flow from "./assets/flow.svg";
 import Plugin from "./assets/plugin.svg";
 import Repo from "./assets/repo.svg";
 import StackAlt from "./assets/stackalt.svg";
+import Angularization from "./assets/a-degrees-inverted.png";
 
 <Meta title="Angularization/Introduction" />
 
 <style>{`
   
+  .sbdocs {
+    background: #f4f4fe;
+    padding: 0;
+  }
+
   .introduction {
     background: #f4f4fe;
     height: 100%;
@@ -23,6 +29,12 @@ import StackAlt from "./assets/stackalt.svg";
     height: 90px;
     text-align: center;
     color: #121fa1;
+  }
+
+  .angularization {
+    margin: 5rem 0 5rem 0;
+    padding: 0 1rem 0 0;
+    width: 6.25rem;
   }
 
   .description {
@@ -108,8 +120,12 @@ import StackAlt from "./assets/stackalt.svg";
 `}</style>
 
 <div className="introduction">
-  <h1 className="header">Angularization Design System</h1>
+  <div className="angularization">
+    <img src={Angularization} alt="Angularization" />
+  </div>
   
+  <h1 className="header">Angularization Design System</h1>
+
   <p className="description">
     Angularization is an Angular design system created with Storybook. <br/> <br/>
     Browse the stories now by navigating to them in the sidebar.

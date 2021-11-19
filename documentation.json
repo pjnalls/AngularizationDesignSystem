@@ -275,7 +275,7 @@
         },
         {
             "name": "FormButtonComponent",
-            "id": "component-FormButtonComponent-e1df3b8667c4399320234b3b7bcf39e1",
+            "id": "component-FormButtonComponent-76a7139322ff9ff52984281c536e5e79",
             "file": "src/app/components/form-button/form-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -332,7 +332,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport { Todo } from 'src/app/Todo';\n\n@Component({\n  selector: 'app-form-button',\n  templateUrl: './form-button.component.html',\n  styleUrls: ['./form-button.component.scss'],\n})\nexport class FormButtonComponent implements OnInit {\n  @Output() onAddTodo: EventEmitter<Todo> = new EventEmitter();\n\n  constructor() {}\n\n  ngOnInit(): void {}\n\n  onAdd() {\n    this.onAddTodo.emit();\n  }\n}\n",
+            "sourceCode": "import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';\nimport type { Todo } from 'src/app/Todo';\n\n@Component({\n  selector: 'app-form-button',\n  templateUrl: './form-button.component.html',\n  styleUrls: ['./form-button.component.scss'],\n})\nexport class FormButtonComponent implements OnInit {\n  @Output() onAddTodo: EventEmitter<Todo> = new EventEmitter();\n\n  constructor() {}\n\n  ngOnInit(): void {}\n\n  onAdd() {\n    this.onAddTodo.emit();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -708,7 +708,7 @@
         },
         {
             "name": "TodoComponent",
-            "id": "component-TodoComponent-a0f6b35db216e086201c1b025f551038",
+            "id": "component-TodoComponent-874ffdfb71249f961e1142b978cd05e9",
             "file": "src/app/components/todo/todo.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -730,7 +730,7 @@
                     "defaultValue": "{\n    id: 0,\n    text: '',\n    day: '',\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 10,
                     "type": "Todo"
                 },
                 {
@@ -738,7 +738,7 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 16,
+                    "line": 15,
                     "type": "Todo[]"
                 }
             ],
@@ -748,7 +748,7 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 17,
                     "type": "EventEmitter<Todo>"
                 },
                 {
@@ -756,7 +756,7 @@
                     "defaultValue": "new EventEmitter()",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 18,
                     "type": "EventEmitter<Todo>"
                 }
             ],
@@ -769,7 +769,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 22
+                    "line": 21
                 },
                 {
                     "name": "deleteBtnClicked",
@@ -779,7 +779,7 @@
                     "type": "boolean",
                     "optional": false,
                     "description": "",
-                    "line": 21
+                    "line": 20
                 }
             ],
             "methodsClass": [
@@ -789,7 +789,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 26,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -806,7 +806,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 32,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -829,7 +829,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';\nimport { TodoService } from 'src/app/services/todo.service';\nimport { Todo } from 'src/app/Todo';\n\n@Component({\n  selector: 'app-todo',\n  templateUrl: './todo.component.html',\n  styleUrls: ['./todo.component.scss'],\n})\nexport class TodoComponent implements OnInit {\n  @Input() todo: Todo = {\n    id: 0,\n    text: '',\n    day: '',\n  };\n  @Input() todos: Todo[] = [];\n\n  @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();\n  @Output() onToggleReminder: EventEmitter<Todo> = new EventEmitter();\n\n  deleteBtnClicked: boolean = false;\n  animationIsDelayed: boolean = false;\n\n  constructor() {}\n\n  ngOnInit(): void {\n    setTimeout(() => {\n      this.animationIsDelayed = true;\n    }, 100);\n  }\n\n  onDelete(todo: Todo) {\n    this.deleteBtnClicked = true;\n    this.onDeleteTodo.emit(todo);\n  }\n}\n",
+            "sourceCode": "import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';\nimport type { Todo } from 'src/app/Todo';\n\n@Component({\n  selector: 'app-todo',\n  templateUrl: './todo.component.html',\n  styleUrls: ['./todo.component.scss'],\n})\nexport class TodoComponent implements OnInit {\n  @Input() todo: Todo = {\n    id: 0,\n    text: '',\n    day: '',\n  };\n  @Input() todos: Todo[] = [];\n\n  @Output() onDeleteTodo: EventEmitter<Todo> = new EventEmitter();\n  @Output() onToggleReminder: EventEmitter<Todo> = new EventEmitter();\n\n  deleteBtnClicked: boolean = false;\n  animationIsDelayed: boolean = false;\n\n  constructor() {}\n\n  ngOnInit(): void {\n    setTimeout(() => {\n      this.animationIsDelayed = true;\n    }, 100);\n  }\n\n  onDelete(todo: Todo) {\n    this.deleteBtnClicked = true;\n    this.onDeleteTodo.emit(todo);\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -844,7 +844,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 22
+                "line": 21
             },
             "implements": [
                 "OnInit"
@@ -1061,7 +1061,17 @@
                 "name": "App",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/App.stories.ts",
+                "file": "src/stories/app.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Button",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -1081,6 +1091,16 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -1088,14 +1108,24 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
-                "name": "environment",
+                "name": "Form",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
+                "file": "src/stories/form.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Input",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "require",
@@ -1110,11 +1140,61 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/App.stories.ts",
+                "file": "src/stories/app.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<AppComponent>",
                 "defaultValue": "(args: AppComponent) => ({\r\n  component: AppComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormButtonComponent>",
+                "defaultValue": "(args: FormButtonComponent) => ({\r\n  component: FormButtonComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormInputComponent>",
+                "defaultValue": "(args: FormInputComponent) => ({\r\n  component: FormInputComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormComponent>",
+                "defaultValue": "(args: FormComponent) => ({\r\n  component: FormComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/title.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TitleComponent>",
+                "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Title",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/title.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "TODOS",
@@ -1131,12 +1211,12 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/stories/App.stories.ts": [
+            "src/stories/app.stories.ts": [
                 {
                     "name": "App",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/App.stories.ts",
+                    "file": "src/stories/app.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1146,11 +1226,33 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/stories/App.stories.ts",
+                    "file": "src/stories/app.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<AppComponent>",
                     "defaultValue": "(args: AppComponent) => ({\r\n  component: AppComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/form-button.stories.ts": [
+                {
+                    "name": "Button",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/form-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/form-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FormButtonComponent>",
+                    "defaultValue": "(args: FormButtonComponent) => ({\r\n  component: FormButtonComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/test.ts": [
@@ -1174,6 +1276,18 @@
                     "type": "literal type"
                 }
             ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1186,16 +1300,70 @@
                     "defaultValue": "{\n  production: false\n}"
                 }
             ],
-            "src/environments/environment.prod.ts": [
+            "src/stories/form.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Form",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
+                    "file": "src/stories/form.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/form.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FormComponent>",
+                    "defaultValue": "(args: FormComponent) => ({\r\n  component: FormComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/form-input.stories.ts": [
+                {
+                    "name": "Input",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/form-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/form-input.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<FormInputComponent>",
+                    "defaultValue": "(args: FormInputComponent) => ({\r\n  component: FormInputComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/title.stories.ts": [
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/title.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TitleComponent>",
+                    "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n})"
+                },
+                {
+                    "name": "Title",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/title.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
                 }
             ],
             "src/app/mock-todos.ts": [
@@ -1363,7 +1531,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/App.stories.ts",
+                "filePath": "src/stories/app.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1373,11 +1541,91 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/App.stories.ts",
+                "filePath": "src/stories/app.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Button",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Input",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form-input.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Form",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/form.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/title.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/title.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Title",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
