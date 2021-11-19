@@ -24,7 +24,6 @@ body {
     rgba($primary-color, 1),
     rgba($secondary-color, 1)
   );
-  border-left: 2px solid $text-color-secondary;
 }
 
 ::-webkit-scrollbar {
@@ -38,5 +37,5 @@ body {
     rgba($primary-color, 1),
     rgba($secondary-color, 1)
   );
-  border-left: 2px solid #000;
+  border-left: 2px solid $text-color-secondary;
 }
