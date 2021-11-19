@@ -12,7 +12,7 @@ import { TODOS } from 'src/app/mock-todos';
 import { FormsModule } from '@angular/forms';
 
 export default {
-  title: 'Page/App',
+  title: 'Angularization/Page/App',
   component: AppComponent,
   decorators: [
     moduleMetadata({

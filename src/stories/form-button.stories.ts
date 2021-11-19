@@ -2,7 +2,7 @@ import { Story, Meta } from '@storybook/angular/types-6-0';
 import { FormButtonComponent } from 'src/app/components/form-button/form-button.component';
 
 export default {
-  title: 'Form/Button',
+  title: 'Angularization/Form/Button',
   component: FormButtonComponent,
   parameters: {
     layout: 'centered',
@@ -14,4 +14,4 @@ const Template: Story<FormButtonComponent> = (args: FormButtonComponent) => ({
   props: args,
 });
 
-export const FormButton = Template.bind({});
+export const Button = Template.bind({});
