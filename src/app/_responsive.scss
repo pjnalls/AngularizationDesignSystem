@@ -1,0 +1,22 @@
+@import 'config';
+
+@include media-md {
+  .todo-list {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+@include media-lg {
+  .todo-list {
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+@include media-xl {
+  .todo-list {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+}
