@@ -49,7 +49,7 @@ export class FormComponent implements OnInit {
   formatAMPM(date: Date) {
     let hours = date.getHours(),
       minutes: any = date.getMinutes(),
-      ampm = hours >= 12 ? 'pm' : 'am';
+      ampm = hours >= 12 ? 'PM' : 'AM';
 
     hours = hours % 12;
     hours = hours ? hours : 12;
