@@ -8,7 +8,7 @@ import { Todo } from './Todo';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  brand: string = 'Aº'
+  brand: string = 'Aº';
   appType: string = 'TODOs';
   todos: Todo[] = TODOS;
 }
