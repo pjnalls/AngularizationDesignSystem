@@ -7,7 +7,7 @@
 
 <br />
 
-<img width="180px" src="a-degrees.png" alt="Aº brand image."/>
+<img width="180px" src="a-degrees-inverted.png" alt="Aº brand image."/>
 
 <br />
 <br />
