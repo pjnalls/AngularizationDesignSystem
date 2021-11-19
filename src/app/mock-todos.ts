@@ -3,7 +3,7 @@ import { Todo } from './Todo';
 export const TODOS: Todo[] = [
   {
     id: 1,
-    text: 'Take out the trash.',
+    text: 'Make to-do list.',
     day: '11/17 @ 7:00 AM',
     top: true,
   },
