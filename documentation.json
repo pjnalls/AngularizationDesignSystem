@@ -954,13 +954,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-1fa0d546a390abc4fce523a90869d5ee",
+            "id": "module-AppModule-99a20cdb8ccb2a9d4d955e10566bc560",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { FormComponent } from './components/form/form.component';\nimport { FormButtonComponent } from './components/form-button/form-button.component';\nimport { FormInputComponent } from './components/form-input/form-input.component';\nimport { TitleComponent } from './components/title/title.component';\nimport { TodoComponent } from './components/todo/todo.component';\nimport { TodoListComponent } from './components/todo-list/todo-list.component';\nimport { FormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    FormComponent,\n    FormButtonComponent,\n    FormInputComponent,\n    TitleComponent,\n    TodoComponent,\n    TodoListComponent,\n    \n  ],\n  imports: [BrowserModule, AppRoutingModule, FormsModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { FormComponent } from './components/form/form.component';\nimport { FormButtonComponent } from './components/form-button/form-button.component';\nimport { FormInputComponent } from './components/form-input/form-input.component';\nimport { TitleComponent } from './components/title/title.component';\nimport { TodoComponent } from './components/todo/todo.component';\nimport { TodoListComponent } from './components/todo-list/todo-list.component';\nimport { FormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    FormComponent,\n    FormButtonComponent,\n    FormInputComponent,\n    TitleComponent,\n    TodoComponent,\n    TodoListComponent,\n  ],\n  imports: [BrowserModule, AppRoutingModule, FormsModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",

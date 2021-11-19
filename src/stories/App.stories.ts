@@ -9,7 +9,7 @@ import { FormInputComponent } from 'src/app/components/form-input/form-input.com
 import { TodoComponent } from 'src/app/components/todo/todo.component';
 import { TodoListComponent } from 'src/app/components/todo-list/todo-list.component';
 import { TODOS } from 'src/app/mock-todos';
-import { AppModule } from 'src/app/app.module';
+import { FormsModule } from '@angular/forms';
 
 export default {
   title: 'Page/App',
@@ -25,7 +25,7 @@ export default {
         TodoComponent,
         TodoListComponent,
       ],
-      imports: [CommonModule],
+      imports: [CommonModule, FormsModule],
     }),
     componentWrapperDecorator(story => `<div style="margin: 0">${story}</div>`),
   ],
