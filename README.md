@@ -16,7 +16,7 @@
 <br />
 
 <p align="center">
-A design system developed with Storybook with Figma addons for Angular components. (WIP)
+A design system developed with Storybook for Angular components. (WIP)
 </p>
 
 <br />
