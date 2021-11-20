@@ -16,11 +16,6 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    if (!this.text) {
-      alert('Please add a task.');
-      return;
-    }
-
     const dateTime = new Date();
 
     const newTodo: Todo = {

@@ -1,21 +1,24 @@
-@import 'config';
+@import "config";
 
 @include media-md {
-  .todo-list {
+  .todo-list, .form-control {
     padding-left: 7.5%;
     padding-right: 7.5%;
+  }
+  .form-input {
+    width: 100vw - 40vw !important;
   }
 }
 
 @include media-lg {
-  .todo-list {
+  .todo-list, .form-control {
     padding-left: 12%;
     padding-right: 12%;
   }
 }
 
 @include media-xl {
-  .todo-list {
+  .todo-list, .form-control {
     padding-left: 16%;
     padding-right: 16%;
   }

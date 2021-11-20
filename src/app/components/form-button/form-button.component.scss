@@ -1,14 +1,14 @@
-@import "./../../config";
+@import './../../config', '../../responsive';
 
 .form-button {
   border: 0;
   color: $tertiary-color;
   background: $text-color-primary;
   font-size: 1rem;
-  margin: 0 0.75rem;
+  margin: 0 0.5rem 0 1rem;
   font-weight: 700;
-  width: 7.5rem;
-  padding: 0.5rem 0;
+  padding: 0.5rem 0.25rem;
+  width: 8rem;
   border: solid 2px $tertiary-color;
   border-radius: 0.225rem;
 }

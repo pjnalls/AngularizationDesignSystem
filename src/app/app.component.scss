@@ -1,0 +1,9 @@
+@import 'config';
+
+.app {
+  background: linear-gradient(
+    to top,
+    rgba($dark, 1),
+    rgba($tertiary-color, 1)
+  );
+}

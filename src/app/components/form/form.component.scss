@@ -1,10 +1,11 @@
-@import "../../config";
+@import '../../config', '../../responsive';
 
 .form {
   overflow: hidden;
-  position: fixed;
-  width: 100vw;
+  position: sticky;
+  width: 100%;
   bottom: 0;
+  height: 5rem;
   background: linear-gradient(
     to bottom,
     rgba($secondary-color, 1),
@@ -12,7 +13,7 @@
   );
 
   .form-control {
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
   }

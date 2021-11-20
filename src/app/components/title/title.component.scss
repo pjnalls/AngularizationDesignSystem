@@ -2,9 +2,10 @@
 
 .title {
   overflow: hidden;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100vw;
+  height: 4rem;
   background: linear-gradient(
     to bottom,
     rgba($primary-color, 1),
