@@ -1,4 +1,5 @@
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { FormButtonComponent } from 'src/app/components/form-button/form-button.component';
@@ -11,7 +12,7 @@ export default {
   decorators: [
     moduleMetadata({
       declarations: [FormComponent, FormInputComponent, FormButtonComponent],
-      imports: [CommonModule],
+      imports: [CommonModule, FormsModule],
     }),
     componentWrapperDecorator(story => `<div style="margin: 0">${story}</div>`),
   ],
