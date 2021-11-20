@@ -266,7 +266,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'config';\r\n\r\n.app {\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba($dark, 1),\r\n    rgba($tertiary-color, 1)\r\n  );\r\n}",
+                    "data": "@import 'config';\r\n\r\n.app, * {\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba($dark, 1),\r\n    rgba($tertiary-color, 1)\r\n  );\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
@@ -612,7 +612,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"./../../config\", './../../responsive';\r\n\r\n.form-input {\r\n  text-decoration: none;\r\n  background-color: transparent;\r\n  border: 0;\r\n  border-bottom: solid 2px $text-color-primary;\r\n  color: $text-color-secondary;\r\n  font-size: 1rem;\r\n  padding: 0.5rem 1rem;\r\n  margin: 0.3rem 0.5rem;\r\n  width: calc(100vw - 11.5rem);\r\n}\r\n\r\n::placeholder {\r\n  color: $text-color-disabled;\r\n}\r\n\r\ninput:valid {\r\n  border-bottom: solid 2px #88ffcc;\r\n  color: $text-color-secondary;\r\n  @include transition-ease;\r\n}",
+                    "data": "@import \"./../../config\", \"./../../responsive\";\r\n\r\n.form-input {\r\n  text-decoration: none;\r\n  background-color: transparent;\r\n  border: 0;\r\n  border-bottom: solid 2px $text-color-primary;\r\n  color: $text-color-secondary;\r\n  font-size: 1rem;\r\n  padding: 0.5rem 1rem;\r\n  margin: 0;\r\n  width: calc(100vw - 37.5vw);\r\n}\r\n\r\n::placeholder {\r\n  color: $text-color-disabled;\r\n}\r\n\r\ninput:valid {\r\n  border-bottom: solid 2px #88ffcc;\r\n  color: $text-color-secondary;\r\n  @include transition-ease;\r\n}",
                     "styleUrl": "./form-input.component.scss"
                 }
             ],
@@ -1160,11 +1160,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/form.stories.ts",
+                "file": "src/stories/form-button.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<FormComponent>",
-                "defaultValue": "(args: FormComponent) => ({\r\n  component: FormComponent,\r\n  props: args,\r\n})"
+                "type": "Story<FormButtonComponent>",
+                "defaultValue": "(args: FormButtonComponent) => ({\r\n  component: FormButtonComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1180,21 +1180,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/form-button.stories.ts",
+                "file": "src/stories/form.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<FormButtonComponent>",
-                "defaultValue": "(args: FormButtonComponent) => ({\r\n  component: FormButtonComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/todo-list.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TodoListComponent>",
-                "defaultValue": "(args: TodoListComponent) => ({\r\n  component: TodoListComponent,\r\n  props: args,\r\n})"
+                "type": "Story<FormComponent>",
+                "defaultValue": "(args: FormComponent) => ({\r\n  component: FormComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1215,6 +1205,16 @@
                 "deprecationMessage": "",
                 "type": "Story<TodoComponent>",
                 "defaultValue": "(args: TodoComponent) => ({\r\n  component: TodoComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/todo-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TodoListComponent>",
+                "defaultValue": "(args: TodoListComponent) => ({\r\n  component: TodoListComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Title",

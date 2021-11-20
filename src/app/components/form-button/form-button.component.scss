@@ -4,13 +4,13 @@
   border: 0;
   color: $tertiary-color;
   background: $text-color-primary;
-  font-size: 1rem;
-  margin: 0 0.5rem 0 1rem;
+  font-size: 0.9rem;
+  margin: 0 0 0 1rem;
   font-weight: 700;
-  padding: 0.5rem 0.25rem;
-  width: 8rem;
+  padding: 0.33rem 0.5rem;
   border: solid 2px $tertiary-color;
   border-radius: 0.225rem;
+  width: calc(35% - 1.5rem);
 }
 
 .form-button:hover {

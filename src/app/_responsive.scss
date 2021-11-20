@@ -5,8 +5,12 @@
     padding-left: 7.5%;
     padding-right: 7.5%;
   }
+  .form-button {
+    font-size: 0.8rem;
+    width: calc(30% - 1.5rem) !important;
+  }
   .form-input {
-    width: calc(100vw - 38.5vw) !important;
+    width: 70% !important;
   }
 }
 
@@ -15,9 +19,11 @@
     padding-left: 12%;
     padding-right: 12%;
   }
-
+  .form-button {
+    width: calc(20% - 1.5rem) !important;
+  }
   .form-input {
-    width: calc(100vw - 40vw) !important;
+    width: 80% !important;
   }
 }
 
@@ -26,8 +32,13 @@
     padding-left: 16%;
     padding-right: 16%;
   }
-
+  .form-button {
+    font-size: 0.8rem;
+  }
+  .form-button {
+    width: calc(15% - 1.5rem) !important;
+  }
   .form-input {
-    width: calc(100vw - 42.5vw) !important;
+    width: 85% !important;
   }
 }
