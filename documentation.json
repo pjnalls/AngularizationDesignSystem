@@ -266,7 +266,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'config';\r\n\r\nbody.app, * {\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba($dark, 1),\r\n    rgba($tertiary-color, 1)\r\n  );\r\n}",
+                    "data": "@import 'config';\r\n\r\n.app {\r\n  background: linear-gradient(\r\n    to top,\r\n    rgba($dark, 1),\r\n    rgba($tertiary-color, 1)\r\n  );\r\n}",
                     "styleUrl": "./app.component.scss"
                 }
             ],
@@ -336,7 +336,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"./../../config\";\r\n\r\n.form-button {\r\n  border: 0;\r\n  color: $tertiary-color;\r\n  background: $text-color-primary;\r\n  font-size: 1rem;\r\n  margin: 0 0.25rem 0 0.5rem;\r\n  font-weight: 700;\r\n  width: 7.5rem;\r\n  padding: 0.5rem 0;\r\n  border: solid 2px $tertiary-color;\r\n  border-radius: 0.225rem;\r\n}\r\n\r\n.form-button:hover {\r\n  background: $text-color-secondary;\r\n  border-color: #000;\r\n  color: #000;\r\n  cursor: pointer;\r\n  @include transition-ease;\r\n}\r\n",
+                    "data": "@import './../../config', '../../responsive';\r\n\r\n.form-button {\r\n  border: 0;\r\n  color: $tertiary-color;\r\n  background: $text-color-primary;\r\n  font-size: 1rem;\r\n  margin: 0 0.5rem 0 1rem;\r\n  font-weight: 700;\r\n  padding: 0.5rem 0.25rem;\r\n  width: 8rem;\r\n  border: solid 2px $tertiary-color;\r\n  border-radius: 0.225rem;\r\n}\r\n\r\n.form-button:hover {\r\n  background: $text-color-secondary;\r\n  border-color: #000;\r\n  color: #000;\r\n  cursor: pointer;\r\n  @include transition-ease;\r\n}\r\n",
                     "styleUrl": "./form-button.component.scss"
                 }
             ],
@@ -512,7 +512,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../../config\";\r\n\r\n.form {\r\n  overflow: hidden;\r\n  position: sticky;\r\n  width: 100%;\r\n  bottom: 0;\r\n  height: 5rem;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1)\r\n  );\r\n\r\n  .form-control {\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n\r\n  font-size: 2rem;\r\n  padding: 1rem 1rem;\r\n  margin-bottom: 0;\r\n  font-weight: 300;\r\n}\r\n",
+                    "data": "@import '../../config', '../../responsive';\r\n\r\n.form {\r\n  overflow: hidden;\r\n  position: sticky;\r\n  width: 100%;\r\n  bottom: 0;\r\n  height: 5rem;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1)\r\n  );\r\n\r\n  .form-control {\r\n    width: 100%;\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n\r\n  font-size: 2rem;\r\n  padding: 1rem 1rem;\r\n  margin-bottom: 0;\r\n  font-weight: 300;\r\n}\r\n",
                     "styleUrl": "./form.component.scss"
                 }
             ],
@@ -612,7 +612,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"./../../config\";\r\n\r\n.form-input {\r\n  text-decoration: none;\r\n  background-color: transparent;\r\n  border: 0;\r\n  border-bottom: solid 2px $text-color-primary;\r\n  color: $text-color-secondary;\r\n  font-size: 1rem;\r\n  padding: 0.5rem 1rem;\r\n  margin: 0 1rem 0 0.25rem;\r\n  width: calc(100vw - 11rem);\r\n}\r\n\r\n::placeholder {\r\n  color: $text-color-disabled;\r\n}\r\n\r\ninput:valid {\r\n  border-bottom: solid 2px #88ffcc;\r\n  color: $text-color-secondary;\r\n  @include transition-ease;\r\n}",
+                    "data": "@import \"./../../config\", './../../responsive';\r\n\r\n.form-input {\r\n  text-decoration: none;\r\n  background-color: transparent;\r\n  border: 0;\r\n  border-bottom: solid 2px $text-color-primary;\r\n  color: $text-color-secondary;\r\n  font-size: 1rem;\r\n  padding: 0.5rem 1rem;\r\n  margin: 0.3rem 0.5rem;\r\n  width: calc(100vw - 11.5rem);\r\n}\r\n\r\n::placeholder {\r\n  color: $text-color-disabled;\r\n}\r\n\r\ninput:valid {\r\n  border-bottom: solid 2px #88ffcc;\r\n  color: $text-color-secondary;\r\n  @include transition-ease;\r\n}",
                     "styleUrl": "./form-input.component.scss"
                 }
             ],
@@ -932,7 +932,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../../config, ../../responsive\";\r\n\r\n.todo-list {\r\n  padding-bottom: 1.5rem;\r\n  padding-top: 6rem;\r\n  height: calc(100vh - 9rem);\r\n  overflow-y: scroll;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n  padding: 2px 0;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1),\r\n    rgba($secondary-color, 1)\r\n  );\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  width: 1rem;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1),\r\n    rgba($secondary-color, 1)\r\n  );\r\n  border-left: 2px solid $text-color-secondary;\r\n}\r\n",
+                    "data": "@import \"../../config, ../../responsive\";\r\n\r\n.todo-list {\r\n  padding-bottom: 1.5rem;\r\n  padding-top: 6rem;\r\n  height: calc(100vh - 9rem);\r\n  overflow-y: scroll;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n  padding: 2px 0;\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1),\r\n    rgba($secondary-color, 1)\r\n  );\r\n}\r\n\r\n::-webkit-scrollbar {\r\n  width: 1rem;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n  background: linear-gradient(\r\n    to bottom,\r\n    rgba($secondary-color, 1),\r\n    rgba($primary-color, 1),\r\n    rgba($secondary-color, 1)\r\n  );\r\n  border-left: 2px solid $text-color-secondary;\r\n}",
                     "styleUrl": "./todo-list.component.scss"
                 }
             ],
@@ -1091,21 +1091,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "Form",
@@ -1160,21 +1160,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/form-input.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<FormInputComponent>",
-                "defaultValue": "(args: FormInputComponent) => ({\r\n  component: FormInputComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/form.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<FormComponent>",
                 "defaultValue": "(args: FormComponent) => ({\r\n  component: FormComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/form-input.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<FormInputComponent>",
+                "defaultValue": "(args: FormInputComponent) => ({\r\n  component: FormInputComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1190,11 +1190,21 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/stories/todo-list.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TodoListComponent>",
+                "defaultValue": "(args: TodoListComponent) => ({\r\n  component: TodoListComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/stories/title.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<TitleComponent>",
-                "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"position: relative !imporant\">${story}</div>`),\r\n  ],\r\n})"
+                "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -1205,16 +1215,6 @@
                 "deprecationMessage": "",
                 "type": "Story<TodoComponent>",
                 "defaultValue": "(args: TodoComponent) => ({\r\n  component: TodoComponent,\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/todo-list.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<TodoListComponent>",
-                "defaultValue": "(args: TodoListComponent) => ({\r\n  component: TodoListComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "Title",
@@ -1316,18 +1316,6 @@
                     "type": "literal type"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1338,6 +1326,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ],
             "src/stories/form.stories.ts": [
@@ -1415,7 +1415,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<TitleComponent>",
-                    "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n  decorators: [\r\n    componentWrapperDecorator((story) => `<div style=\"position: relative !imporant\">${story}</div>`),\r\n  ],\r\n})"
+                    "defaultValue": "(args: TitleComponent) => ({\r\n  component: TitleComponent,\r\n  props: args,\r\n})"
                 },
                 {
                     "name": "Title",
